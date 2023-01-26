@@ -1,19 +1,129 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <title>Accueil | FRWAY</title>
+</head>
+<body>
+
+
+
+<div class="background_custom" >
+    <div class="container-fluid px-0">
+        <nav class="navbar navbar-expand-lg  fixed-top background_modif">
+            <div class="container-fluid ">
+                <img src="/uploads/logofrw.webp" alt="logo FRWAY RP" class="nav_img-frway">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse fw-bold fs-6" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link active "  aria-current="page" href="#">Accueil</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="#">Réglement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Métiers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tickets</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Concession</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Vote</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex" role="search">
+                        <div class="nav_bar_button">
+                            <a href="https://discord.gg/RgsBfbj4DR">
+                                <img src="/uploads/discord.png" alt="logo discord" class="nav_img">
+                            </a>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container container_custom">
+            <div class="title-wrapper">
+                <h1 class="sweet-title">
+                    <span data-text="Sweet">FRWAY</span>
+                    <span data-text="Stuff">RP</span>
+                </h1>
+                <span class="top-title">Bienvenue sur</span>
+                <!-- <span class="bottom-title">Le serveur GTA RP</span> -->
+
+        </div>
+    </div>
+
+
+
+</div>
+</div>
+<div class="container-fluid jobs background_jobs">
+    <div class="container">
+        <h1 class="jobs_custom ">Nos Métiers</h1>
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
+            <div class="carousel-inner " >
+                <div class="carousel-item active">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./police.webp" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Police Nationale</h5>
+                                    <img src="/uploads/discord.png"  class="nav_img-frway" alt="">
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-4">
+                            <img src="./police.webp" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img src="./police.webp" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="70vh" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="70vh" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+                </div>
+            </div>
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+</body>
 </html>
