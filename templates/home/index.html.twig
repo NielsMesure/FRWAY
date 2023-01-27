@@ -12,51 +12,27 @@
             <!-- <span class="bottom-title">Le serveur GTA RP</span> -->
         </div>
     </div>
-    </div>
-    </header>
-    </div>
+
     <div class="container-fluid jobs background_jobs">
         <div class="container">
-            <h1 class="jobs_custom ">Nos Métiers</h1>
-
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
-                <div class="carousel-inner " >
-                    {% for job in jobs %}
-                    <div class="carousel-item active">
-                        <div class="row text-center">
-                            <div class="col-4">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/uploads/{{ job.illustration }}" alt="">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ job.name }}</h5>
-                                        <a href="{{ job.linkDiscord }}">
-                                        <img src="/uploads/discord.png"  class="nav_img-frway" alt="">
-                                        </a>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-
+            <div class="row justify-content-center">
+                {% for job in jobs %}
+                    <div class="col-md-3 mt-5 d-flex flex-wrap justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="/uploads/{{ job.illustration }}" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ job.name }}</h5>
+                                <a href="{{ job.linkDiscord }}">
+                                    <img src="/uploads/discord.png"  class="nav_img-frway" alt="">
+                                </a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
-
                         </div>
-
                     </div>
-                    {% endfor %}
-
-                </div>
-                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                {% endfor %}
             </div>
         </div>
-
-
     </div>
 
 {% endblock %}
