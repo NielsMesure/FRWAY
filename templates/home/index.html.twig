@@ -1,20 +1,62 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block content %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container container_custom">
+        <div class="title-wrapper">
+            <h1 class="sweet-title">
+                <span data-text="Sweet">FRWAY</span>
+                <span data-text="Stuff">RP</span>
+            </h1>
+            <span class="top-title">Bienvenue sur</span>
+            <!-- <span class="bottom-title">Le serveur GTA RP</span> -->
+        </div>
+    </div>
+    </div>
+    </header>
+    </div>
+    <div class="container-fluid jobs background_jobs">
+        <div class="container">
+            <h1 class="jobs_custom ">Nos Métiers</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" >
+                <div class="carousel-inner " >
+                    {% for job in jobs %}
+                    <div class="carousel-item active">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="/uploads/{{ job.illustration }}" alt="">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ job.name }}</h5>
+                                        <a href="{{ job.linkDiscord }}">
+                                        <img src="/uploads/discord.png"  class="nav_img-frway" alt="">
+                                        </a>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    </div>
+                                </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/niels/Desktop/HomeWork/Projet Site GTA/FRWAY/src/Controller/HomeController.php'|file_link(0) }}">src/Controller/HomeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/niels/Desktop/HomeWork/Projet Site GTA/FRWAY/templates/home/index.html.twig'|file_link(0) }}">templates/home/index.html.twig</a></code></li>
-    </ul>
-</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    {% endfor %}
+
+                </div>
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
 {% endblock %}
