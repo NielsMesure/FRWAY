@@ -13,20 +13,20 @@
         </div>
     </div>
 
-    <div class="container-fluid background_jobs">
-        <div class="container">
+    <div class="container-fluid jobs background_jobs">
+
+        <div class="container ">
+            <h1 class=" jobs_custom">Les métiers</h1>
             <div class="row justify-content-center">
                 {% for job in jobs %}
-                    <div class="col-md-3 mt-5 d-flex flex-wrap justify-content-center jobs_custom">
-                        <div class="card" style="width: 18rem;">
-                            <img src="/uploads/{{ job.illustration }}" alt="">
-                            <div class="card-body">
-                                <h5 class="card-title">{{ job.name }}</h5>
-                                <a href="{{ job.linkDiscord }}">
-                                    <img src="/uploads/discord.png"  class="nav_img-frway" alt="">
+                    <div class="col-md-3 mt-5 d-flex flex-wrap justify-content-center text-center">
+                        <div class="card card-custom" style="width: 18rem;">
+                            <img src="/uploads/{{ job.illustration }}" alt="" class="img-job mx-auto pt-3">
+                            <div class="card-body fix ">
+                                <h5 class="card-title ">{{ job.name }}</h5>
+                                <a href="{{ job.linkDiscord }} " target="_blank">
+                                    <img src="/uploads/discord.png"  class="logo-discord-job mx-auto " alt="">
                                 </a>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                         </div>
                     </div>

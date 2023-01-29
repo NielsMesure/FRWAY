@@ -96,17 +96,40 @@
   }
 
   .jobs_custom{
-    padding-top: 110px;
+    padding-top: 120px;
     padding-bottom: 10px;
+
   }
 
   .background_jobs{
       background-color: antiquewhite;
   }
 
-  .carousel-control-prev{
-    padding-right: 150px;
+  @media (min-width: 767px ) {
+      .jobs{
+          height: 100vh;
+      }
   }
-  .carousel-control-next{
-    padding-left: 150px;
-  }
+
+.logo-discord-job{
+    height: 40px;
+}
+
+.fix{
+
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.img-job{
+    width: 60%;
+}
+.card-custom{
+    background-color: #d7c8b3;
+    height: 270px;
+}
