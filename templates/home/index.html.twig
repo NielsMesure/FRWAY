@@ -19,15 +19,24 @@
             <h1 class=" jobs_custom">Les métiers</h1>
             <div class="row justify-content-center">
                 {% for job in jobs %}
-                    <div class="col-md-3 mt-5 d-flex flex-wrap justify-content-center text-center">
-                        <div class="card card-custom" style="width: 18rem;">
-                            <img src="/uploads/{{ job.illustration }}" alt="" class="img-job mx-auto pt-3">
-                            <div class="card-body fix ">
-                                <h5 class="card-title ">{{ job.name }}</h5>
-                                <a href="{{ job.linkDiscord }} " target="_blank">
-                                    <img src="/uploads/discord.png"  class="logo-discord-job mx-auto " alt="">
-                                </a>
+                    <div class="col-md-3 mt-5 d-flex flex-wrap justify-content-center text-center card-custom">
+                        <div class="card card-background" style="width: 18rem">
+                            <div class="container  img-center" style="height: 60%;" >
+                                <div class="row " >
+                                    <img src="/uploads/{{ job.illustration }}" alt="" class="img-job mx-auto pt-3">
+                                </div>
                             </div>
+                            <div class="container ">
+                                <div class="row">
+                                    <div class="card-body fix ">
+                                        <h5 class="card-title ">{{ job.name }}</h5>
+                                        <a href="{{ job.linkDiscord }} " target="_blank">
+                                            <img src="/uploads/discord.png"  class="logo-discord-job mx-auto " alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 {% endfor %}

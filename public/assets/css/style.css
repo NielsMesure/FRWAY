@@ -105,11 +105,18 @@
       background-color: antiquewhite;
   }
 
-  @media (min-width: 767px ) {
+  @media (min-width: 767px) {
       .jobs{
           height: 100vh;
       }
   }
+
+@media (max-height: 823px) {
+    .jobs{
+        height: auto;
+    }
+
+}
 
 .logo-discord-job{
     height: 40px;
@@ -126,10 +133,23 @@
 
 }
 
+.row-custom{
+    height: 500px;
+}
+
 .img-job{
     width: 60%;
 }
 .card-custom{
-    background-color: #d7c8b3;
+
     height: 270px;
+}
+.img-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-background{
+    background-color: #d7c8b3;
 }
