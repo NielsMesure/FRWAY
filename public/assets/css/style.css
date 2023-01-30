@@ -25,9 +25,15 @@
     background-position: center;
 }
 
-.background_modif
+.background-modif
 {
-    background-color: rgba(8, 4, 1, 0.39);
+    background-color: rgba(65, 60, 57, 0.3);
+    transition:500ms ease;
+}
+
+
+.background-modif.scrolled{
+    background-color: rgba(105, 105, 105, 0.35);
 }
 
 .custom-container{
@@ -164,7 +170,7 @@
 
 .btn-car{
     background-color: #4c1d95;
-    color: #ded5d5;
+    color: #e8e5e5;
 }
 .btn-car:hover{
     background-color: #614d81;
