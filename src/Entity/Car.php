@@ -23,7 +23,8 @@ class Car
     private ?string $description = null;
 
     #[ORM\ManyToOne(inversedBy: 'cars')]
-    private ?carBrand $brand = null;
+    private ?Brand $brand = null;
+
 
     public function getId(): ?int
     {
@@ -66,15 +67,17 @@ class Car
         return $this;
     }
 
-    public function getBrand(): ?carBrand
+    public function getBrand(): ?Brand
     {
         return $this->brand;
     }
 
-    public function setBrand(?carBrand $brand): self
+    public function setBrand(?Brand $brand): self
     {
         $this->brand = $brand;
 
         return $this;
     }
+
+
 }
